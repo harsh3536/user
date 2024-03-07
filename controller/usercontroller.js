@@ -31,13 +31,11 @@ exports.userlogin = async (req, res, next) => {
     else {
         if (email) {
             res.status(404).json({ message: "Email not Valid" })
-        }
-        else if (password) {
+        }else if (password) {
             res.status(404).json({ message: "Password not Valid" })
         } else if (email && password) {
             res.status(404).json({ message: "Email And Password not Valid" })
-        }
-        else {
+        }else {
             res.status(404).json({ message: "Login UnSuccessful" })
         }
     }
